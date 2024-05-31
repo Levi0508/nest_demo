@@ -19,7 +19,9 @@ export class UserService {
     return this.userRepository.delete(id);
   }
 
-  update(id: number, user: User) {
+  update(user: User) {
+    const { id } = user;
+
     return this.userRepository.update(id, user);
   }
 
@@ -29,6 +31,9 @@ export class UserService {
 
   findById(id: number) {
     return this.userRepository.findOneBy({ id });
+  }
+  findByName(name: string) {
+    return this.userRepository.findOneBy({ name });
   }
   // findAll(): Promise<User[]> {
   //   return this.userRepository.find();

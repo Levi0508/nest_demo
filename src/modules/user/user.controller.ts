@@ -50,10 +50,15 @@ export class UserController {
     return this.userService.delete(id);
   }
 
-  @Post('/update/:id')
-  update(@Param('id') id: number, @Body() user: User): any {
-    return this.userService.update(id, user);
+  @Post('/update')
+  update(@Body() user: User): any {
+    return this.userService.update(user);
   }
+
+  // @Post('/update/:id')
+  // update(@Param('id') id: number, @Body() user: User): any {
+  //   return this.userService.update(id, user);
+  // }
 
   @Get('/findAll')
   findAll(): Promise<User[]> {
@@ -63,6 +68,10 @@ export class UserController {
   @Get('/findById/:id')
   findById(@Param('id') id: number): any {
     return this.userService.findById(id);
+  }
+  @Get('/findByName/:name')
+  findByName(@Param('name') name: string): any {
+    return this.userService.findByName(name);
   }
 
   // @Get()
