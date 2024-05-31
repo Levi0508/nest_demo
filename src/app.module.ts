@@ -17,7 +17,7 @@ import { globalModule } from './modules/globalModule';
 @Module({
   imports: [
     CatsModule,
-    UserModule,
+
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: '1.94.7.79',
@@ -32,6 +32,7 @@ import { globalModule } from './modules/globalModule';
       autoLoadEntities: true, //自动加载实体
     }),
     BoyModule,
+    UserModule,
     globalModule.forRoot('123'),
   ], //功能模块
   controllers: [AppController],
