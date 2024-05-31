@@ -17,7 +17,6 @@ import { globalModule } from './modules/globalModule';
 @Module({
   imports: [
     CatsModule,
-
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: '1.94.7.79',
