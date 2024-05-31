@@ -7,7 +7,7 @@ import { LoggerMiddleware } from './middleware/logger.middleware';
 import { fnMiddleware } from './middleware/fn.middleware';
 
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './entity/user.entity';
+import { User } from './modules/user/entity/user.entity';
 import { UserModule } from './modules/user/user.module';
 
 import { BoyModule } from './modules/boy/boy.module';

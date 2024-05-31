@@ -11,7 +11,7 @@ import { UserService } from './user.service';
 import { BoyService } from '../boy/boy.service';
 import { CatsService } from '../cats/cats.service';
 
-import { User } from '../../entity/user.entity';
+import { User } from './entity/user.entity';
 
 @Controller('users')
 export class UserController {
@@ -41,8 +41,12 @@ export class UserController {
 
     return this.userService.add(user);
   }
-  @Post('/delete/:id')
-  detele(@Param('id') id: number): any {
+  // @Post('/delete/:id')
+  // detele(@Param('id') id: number): any {
+  //   return this.userService.delete(id);
+  // }
+  @Post('/delete')
+  detele(@Body('id') id: number): Promise<any> {
     return this.userService.delete(id);
   }
 
