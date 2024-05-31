@@ -20,9 +20,9 @@ import { globalModule } from './modules/globalModule';
     UserModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: '121.199.164.244',
+      host: '1.94.7.79',
       port: 3306,
-      username: 'root',
+      username: 'demo_mysql',
       password: 'Clf19980508+',
       database: 'demo',
       entities: [User],
